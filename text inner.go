@@ -16,3 +16,13 @@ func SetAddressPrefixes() {
 		if len(bytes) == 0 {
 			return sdkerrors.Wrap(sdkerrors.ErrUnknownAddress, "addresses cannot be empty")
 		}
+
+
+		type Trainer struct {
+	suite.Suite
+
+	App         *app.TrainerApp
+	Ctx         sdk.Context
+	QueryHelper *baseapp.QueryServiceTestHelper
+	TestAccs    []sdk.AccAddress
+}
